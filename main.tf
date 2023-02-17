@@ -1,9 +1,12 @@
 provider "azurerm" {
-  features {
-    
-  }
+    features {}
 }
-resource "azurerm_resource_group" "cosmos" {
-  name     = "cosmos"
-  location = "East US"
+
+resource "azurerm_resource_group" "anuja-tf" {
+  location = "eastus"
+  name = "anuja-tf"
+  tags = {
+    Name = "Day"
+    Day = "5"
+  }
 }
